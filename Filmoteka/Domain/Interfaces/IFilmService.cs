@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Entities;
+using Filmoteka.Domain.Entities;
 
-namespace FitnessRecords.Domain.Interfaces
+namespace Filmoteka.Domain.Interfaces
 {
     /// <summary>
     /// Служба для работы с интерфейсами - интерфейс нужен для dependency injection

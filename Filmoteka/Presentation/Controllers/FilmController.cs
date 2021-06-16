@@ -4,14 +4,14 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Interfaces;
-using FitnessRecords.Presentation.Models;
+using Filmoteka.Domain.Interfaces;
+using Filmoteka.Presentation.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Sentry;
-namespace FitnessRecords.Presentation.Controllers
+namespace Filmoteka.Presentation.Controllers
 {
     [ApiController]
     [Route("films")]
@@ -36,7 +36,7 @@ namespace FitnessRecords.Presentation.Controllers
                 .CreateLogger();
             try
             {
-                logger.Information("Запрос на получение упражнений");
+                logger.Information("Запрос доступных фильмов");
 
                 //throw new Exception("Страшная ошибка");
                 //Используем сервис как интерфейс, но вместо него в Startup.cs подставлена реализация
@@ -55,7 +55,7 @@ namespace FitnessRecords.Presentation.Controllers
         {
             try
             {
-                Console.WriteLine("Getting excercises");
+                Console.WriteLine("Получение фильмов");
 
                 if (model == null)
                 {

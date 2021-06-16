@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Entities;
+using Filmoteka.Domain.Entities;
 
-namespace FitnessRecords.Infrastructure.DTO
+namespace Filmoteka.Infrastructure.DTO
 {
     public class FilmDTO
     {

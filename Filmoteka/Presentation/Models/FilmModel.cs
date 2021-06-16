@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Entities;
+using Filmoteka.Domain.Entities;
 
-namespace FitnessRecords.Presentation.Models
+namespace Filmoteka.Presentation.Models
 {
     public class FilmModel
     {

@@ -5,12 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Entities;
-using FitnessRecords.Domain.Interfaces;
-using FitnessRecords.Infrastructure.DTO;
+using Filmoteka.Domain.Entities;
+using Filmoteka.Domain.Interfaces;
+using Filmoteka.Infrastructure.DTO;
 using Microsoft.Extensions.Configuration;
 
-namespace FitnessRecords.Infrastructure.Repositories
+namespace Filmoteka.Infrastructure.Repositories
 {
     public class FilmRepository : IFilmRepository
     {
@@ -61,7 +61,7 @@ namespace FitnessRecords.Infrastructure.Repositories
                 Console.WriteLine($"open con {connection.ConnectionString}");
                 await connection.OpenAsync();
                 Console.WriteLine("con opened");
-                using (var cmd = new SqlCommand($"INSERT INTO dbo.Exercises (name, description) VALUES ('{film.Name}','{film.Description}')", connection))
+                using (var cmd = new SqlCommand($"INSERT INTO dbo.Films (name, description) VALUES ('{film.Name}','{film.Description}')", connection))
                 {
                     Console.WriteLine("exec command");
                     await cmd.ExecuteNonQueryAsync();
@@ -76,7 +76,7 @@ namespace FitnessRecords.Infrastructure.Repositories
             {
                 await connection.OpenAsync();
                 var b = Convert.ToBase64String(file);
-                using (var cmd = new SqlCommand($"INSERT INTO dbo.Exercises (name, description, picture) VALUES ('{description}','{description}, {b}')", connection))
+                using (var cmd = new SqlCommand($"INSERT INTO dbo.Films (name, description, picture) VALUES ('{description}','{description}, {b}')", connection))
                 {
                     await cmd.ExecuteNonQueryAsync();
                 }

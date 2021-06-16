@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FitnessRecords.Domain.Entities;
-using FitnessRecords.Domain.Interfaces;
+using Filmoteka.Domain.Entities;
+using Filmoteka.Domain.Interfaces;
 
-namespace FitnessRecords.Domain.Services
+namespace Filmoteka.Domain.Services
 {
     public class FilmsService : IFilmService
     {
